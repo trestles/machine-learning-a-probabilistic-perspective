@@ -89,6 +89,39 @@
   - 3.5.5. Classifying documents using bag of words 90 
 
 ### 4. Gaussian Models
+- 4.1. Introduction 99
+  - 4.1.1. Notation 99
+  - 4.1.2. Basics 99
+  - 4.1.3. MLE for an MVN 101
+  - 4.1.4. Maximum entropy deviation of the Gaussian * 103
+- 4.2. Gaussian discriminant analysis 103
+  - 4.2.1. Quadratic discriminant analysis (QDA) 104
+  - 4.2.2. Linear discriminant analysis (LDA) 105
+  - 4.2.3. Two-class LDA 106
+  - 4.2.4. MLE for discriminant analysis 108
+  - 4.2.5. Strategies for preventing overfitting 108
+  - 4.2.6. Regularized LDA * 109
+  - 4.2.7. Diagonal LDA 110
+  - 4.2.8. Nearest shrunken centroids classifier * 111
+- 4.3. Inferences in jointly Gaussian distributions 112
+  - 4.3.1. Statement of the result 113
+  - 4.3.2. Examples 113
+  - 4.3.3. Information form 117
+  - 4.3.4. Proof of the result * 118
+- 4.4. Linear Gaussian systems  121
+  - 4.4.1. Statement of the result 122
+  - 4.4.2. Examples 122
+  - 4.4.3. Proof of the result * 127
+- 4.5. Digression: The Wishart distribution * 128
+  - 4.5.1. Inverse Wishart distribution 129
+  - 4.5.2. Visualizing the Wishart distribution 129
+- 4.6. Inferring the parameters of an MVN 129
+  - 4.6.1. Posterior distribution of mu 130 
+  - 4.6.2. Posterior distribution of E * 131
+  - 4.6.3. Posterior distribution of u nad E * 134
+  - 4.6.4. Sensor fusion with unknown precisions * 140
+
+
 ### 5. Bayesian Statistics
 - 5.1. Introduction
 - 5.2. Summarizing posterior distributions 151
@@ -117,6 +150,31 @@
 
 
 ### 6. Frequentist Statistics
+- 6.1. Introduction
+- 6.2. Sampling distribution of an estimator 
+  - 6.2.1 Bootstrap 194
+  - 6.2.2. Large sample theory for the MLE * 195
+- 6.3. Frequentist decision theory 197
+  - 6.3.1. Bayes risk 197
+  - 6.3.2. Minimax risk 198
+  - 6.3.3. Admissable estimators 199
+- 6.4. Desirable properties of estimators 202
+  - 6.4.1. Consistent estimators 202
+  - 6.4.2. Unbiased estimators 203
+  - 6.4.3. Maximum variance estimators 203
+  - 6.4.4. The bias-variance tradeoff 204
+- 6.5. Emperical risk minimization 207
+  - 6.5.1. Regularized risk minimization 208
+  - 6.5.2. Structural risk minimization 208
+  - 6.5.3. Estimating the risk using cross-validation 209
+  - 6.5.4. Upper-bounding the risk using statistical learning theory * 211
+  - 6.5.5. Surrogate loss functions 213
+- 6.6. Pathologies of frequentist statistics * 214 
+  - 6.6.1. Counter-intuitive behavior of confidence intervals 214
+  - 6.6.2. p-values considered harmful 215
+  - 6.6.3. The likelihood principle 217
+  - 6.6.4. Why isn't everyone a Bayesian? 217
+
 ### 7. Linear Regression
 - 7.1. Introduction 219
 - 7.2. Model Specification 219
@@ -164,9 +222,62 @@
   - 8.6.2. Dealing with missing data 271
   - 8.6.3. Fisher's linear discriminant analysis (FLDA) * 274
 
-  
+
 ### 9. Generalized Linear Models and the Exponential Family
+- 9.1. Introduction 283
+- 9.2. The exponential family 283
+  - 9.2.1. Definition 284
+  - 9.2.2. Examples 284
+  - 9.2.3. Log partition function 286
+  - 9.2.4. MLE for the exponential function 288
+  - 9.2.5. Bayes for the exponential family * 289
+  - 9.2.6. Maximum entropy derivation of the exponential family * 291
+- 9.3. Generalized linear models (GLM) 292
+  - 9.3.1. Basics 292
+  - 9.3.2. ML and MAP estimation 294
+  - 9.3.3. Bayesian inference 295
+- 9.4. Probit regression 295
+  - 9.4.1. ML/MAP estimation using gradient-based optimization 296
+  - 9.4.2. Latent variable interpretation 296
+  - 9.4.3. Oridinal probit regression * 297
+  - 9.4.4. Multinomial probit models * 297
+- 9.5. Mult-task learning 298
+  - 9.5.1. Hierarchical Bayes for multi-task learning 298
+  - 9.5.2. Application to personalized email spam filtering 298
+  - 9.5.3. Application to domain adaptation 299
+  - 9.5.4. Other kinds of prior 299
+- 9.6. Generalized linear mixed models * 300
+  - 9.6.1. Example: semi-parametric GLMMs for medical data 300
+  - 9.6.2. Computational issues 302
+- 9.7. Learning to rank * 302
+  - 9.7.1. The pointwise approach 303
+  - 9.7.2. The pairwise approach 303
+  - 9.7.3. The listwise approach 304 
+  - 9.7.4. Loss functions for ranking 305
+
 ### 10. Directed Graphical Models (Bayes nets)
+- 10.1 Introduction 309
+  - 10.1.1. Chain rule 309
+  - 10.1.2. Conditional independence 310
+  - 10.1.3. Graphical models 310
+  - 10.1.4. Graph terminology 311
+  - 10.1.5. Directed graphical models 312
+- 10.2. Examples 313
+  - 10.2.1. Naive Bayes classifiers 313
+  - 10.2.2. Markov and hidden Markov models 314
+  - 10.2.3. Medical diagnosis 315
+  - 10.2.4. Genetic linkage analysis * 317
+  - 10.2.5. Directed Gaussian graphical models * 320 
+- 10.3. Inference 321
+- 10.4. Learning 322
+  - 10.4.1. Plate notation 322
+  - 10.4.2. Learning from complete data 324
+  - 10.4.3. Learning with missing and / or latent variables 325 
+- 10.5. Conditional independence properties of DGMs 326
+  - 10.5.1. d-separation and the Bayes Ball algorithm (global Markov properties) 326
+  - 10.5.2. Other Markov properties of DGMs 329
+  - 10.5.3. Markov blanket and full conditionals 329
+- 10.6. Influence of decision diagrams * 330
 
 
 ### 25. Clustering 877
